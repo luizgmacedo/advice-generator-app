@@ -1,0 +1,9 @@
+@use "../../assets/scss/" as *;
+
+.generate-button {
+  @include button-submit;
+
+  &:hover {
+    @include button-hover;
+  }
+}

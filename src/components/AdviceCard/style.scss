@@ -1,0 +1,59 @@
+@use "../../assets/scss/" as *;
+
+.advice-card {
+  max-width: 500px;
+  width: 100%;
+  background-color: $dark-grayish-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+
+  .card {
+    text-align: center;
+    padding: 2rem .5rem;
+
+    .heading {
+      color: $neon-green;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .advice {
+      color: $light-cyan;
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+
+  .divider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .desktop {
+      display: none;
+    }
+  }
+
+  .generate-button {
+    transform: translateY(30px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .advice-card {
+    .card {
+      .divider {
+        .mobile {
+          display: none;
+        }
+
+        .desktop {
+          display: block;
+        }
+      }
+    }
+  }
+}
