@@ -45,7 +45,7 @@ jobs:
           SOURCE_DIR: 'dist'
           
       - name: Invalidate CloudFront
-      - uses: chetan/invalidate-cloudfront-action@v1.3
+        uses: chetan/invalidate-cloudfront-action@v1.3
         env: 
           DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
           PATHS: '/*'
